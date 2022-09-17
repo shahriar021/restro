@@ -1,0 +1,28 @@
+.footera{
+    background:#04AA6D;
+    color:#8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.footera p{
+    color: #8a8a8a;
+}
+
+.footera h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.containera{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.rowa{
+    display:flex;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/style.css')}}">
+
+</head>
+<style>
+    table, tr,td{
+
+        border: 10px solid cadetblue;
+        border-collapse: collapse;
+
+    }
+    a{
+            text-decoration: none;
+            color: green;
+            font-size: 20px;
+            padding: 8px;
+        }
+        a:hover{
+            color: blue;
+        }
+             h1{
+        text-align: center;
+        }
+</style>
+
+<body>
+<div class="ban"><h1><i>restro</i></h1></div>
+<nav>
+    <a href="/home">Home</a> |
+    <a href="showitem">Show Item</a> |
+    <a href="/booking">Booking</a> |
+
+    <div align="right">
+    <a href="/login">Log in</a> |
+        <a href="/signup">Sign up</a> |
+        </div>
+ </nav>
+
+    <table width="100%">
+        <tr>
+            <td>Item ID</td>
+            <td>Item Name</td>
+            <td>Item Details</td>
+            <td>Item Price</td>
+
+            <!--<td>Order here</td>-->
+        </tr>
+        {%for st in list%}
+             <tr>
+                <td>{{st['id']}}</td>
+                <td>{{st['itemname']}}</td>
+                <td>{{st['itemdetails']}}</td>
+                <td>{{st['price']}}</td>
+
+                 <!--<td><input type="submit" value="order"/><input type="submit" value="cancel"/></td>-->
+             <!--<td><a href="another.html"/>order</td>-->
+                 <!--<td><a href="another.html"/> <button class="btn">Order</button></td>-->
+            </tr>
+        {%endfor%}
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="row1">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row1">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row1">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+            <div class="row1">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn1">
+      </form>
+    </div>
+  </div>
+
+
+</div>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: orangered;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+
+<button class="open-button" onclick="openForm()">Order</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/order" class="form-container" method="post">
+    <h1>Order</h1>
+
+    <label for="itemid"><b>Item Id</b></label>
+    <input type="text"  name="itemid" required>
+
+    <label for="orderaddress"><b>Address</b></label>
+    <input type="text"  name="orderaddress" required>
+
+    <label for="orderphone"><b>Phone</b></label>
+    <input type="text"  name="orderphone" required>
+
+    <button type="submit" class="btn" onclick="Order()">Order</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function Order() {
+  alert("order received successfull!!");
+}
+</script>
+
+
+
+
+<div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col-1">
+                    <img src="{{url_for('static', filename='restro.jpg')}}" />
+                    <p>Our goal is to satisfy you </p>
+                </div>
+
+                <div class="footer-col-2">
+                    <h3>Download our app</h3>
+                    <p>Download app for android or ios</p>
+                </div>
+
+
+                <div class="footer-col-3">
+                    <h3>Follow</h3>
+                    <li>facebook</li>
+                    <li>blog</li>
+                    <li>markating</li>
+                    <li>privacy</li>
+                </div>
+                <div class="footer-col-3">
+                    <h3>links</h3>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                    <li>google</li>
+                    <li>youtube</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

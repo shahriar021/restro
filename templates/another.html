@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/style.css')}}">
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/order.css')}}">
+    <style>
+
+        p {
+          text-align: center;
+          font-size: 60px;
+          margin-top: 0px;
+          background-color: #820000;
+          color: #f1f1f1;
+        }
+
+        a{
+            text-decoration: none;
+            color: green;
+            font-size: 20px;
+            padding: 8px;
+        }
+        a:hover{
+            color: blue;
+        }
+             h1{
+        text-align: center;
+        }
+    </style>
+</head>
+<body class="bdy">
+<div class="ban"><h1><i>restro</i></h1></div>
+
+<nav>
+    <a href="/home">Home</a> |
+    <a href="/show item">Show Item</a> |
+    <div align="right">
+    <a href="/login">Log in</a> |
+        <a href="/signup">Sign up</a> |
+        </div>
+ </nav>
+
+<h1 align="center">Order recevied as </h1>
+
+
+<table width="100%">
+        <tr>
+            <td>Item ID</td>
+            <td>Address</td>
+            <td>Phone</td>
+
+
+            <!--<td>Order here</td>-->
+        </tr>
+        {%for odr in list%}
+             <tr>
+                <td>{{odr['itemid']}}</td>
+                <td>{{odr['orderaddress']}}</td>
+                <td>{{odr['orderphone']}}</td>
+
+            </tr>
+        {%endfor%}
+    </table>
+
+<h2 align="center">Wait a little, Your food is coming!!!</h2>
+
+<div align="center"><img src="{{url_for('static', filename='food2(1).jpg')}}" /></div>
+
+
+<p id="demo"></p>
+
+<script>
+
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+
+var x = setInterval(function() {
+
+
+  var now = new Date().getTime();
+
+
+  var distance = countDownDate - now;
+
+
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+  document.getElementById("demo").innerHTML =  minutes + "m " + seconds + "s ";
+
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Collect your food!! Enjoy ...";
+  }
+}, 1000);
+</script>
+
+
+
+
+
+
+
+
+
+<div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col-1">
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Your Feedback</label>
+                    <button type="submit"  class="btn" onclick="fd()">send</button>
+
+
+                </div>
+
+
+                <div class="footer-col-3">
+                    <h3>Follow</h3>
+                    <li>facebook</li>
+                    <li>blog</li>
+                    <li>markating</li>
+                    <li>privacy</li>
+                </div>
+                <div class="footer-col-3">
+                    <h3>links</h3>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                    <li>google</li>
+                    <li>youtube</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <script>
+
+
+                    function fd() {
+                      alert("Thank your for your valuable feedback!!");
+                    }
+                    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <meta http-equiv="refresh" content=" url=/alldata.html">
+
+    <title>Document</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style/admin.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/style.css')}}">
+
+
+
+    <style>
+
+        a{
+            text-decoration: none;
+            color: green;
+            font-size: 20px;
+            padding: 8px;
+        }
+        a:hover{
+            color: blue;
+        }
+             h1{
+        text-align: center;
+        }
+
+    </style>
+</head>
+<body class="bdy">
+<div class="ban"><h1><i>restro</i></h1></div>
+<nav>
+    <a href="home.html">Home</a> |
+    <a href="stdinfo.html">Show Item</a> |
+    <div align="right">
+    <a href="login.html">Log in</a> |
+        <a href="signup.html">Sign up</a> |
+        </div>
+ </nav>
+<marquee>Admin panel.....</marquee>
+<h1>counter</h1>
+
+
+
+    <form action="/input" method="post"><h3 style="text-align:center;">Item ID:</h3>
+
+        <input type="text" name="id"/>
+        <h3 style="text-align:center;">Item Name:</h3>
+        <input type="text" name="itemname"/>
+        <h3 style="text-align:center;">Item Details:</h3>
+        <input type="text" name="itemdetails"/>
+        <h3 style="text-align:center;">Item Price:</h3>
+        <input type="text" name="price"/>
+
+        <input type="submit" value="Submit"/>
+    </form>
+
+
+
+
+<div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col-1">
+                    <img src="{{url_for('static', filename='restro.jpg')}}" />
+                    <p>Our goal is to satisfy you </p>
+                </div>
+
+                <div class="footer-col-2">
+                    <h3>Download our app</h3>
+                    <p>Download app for android or ios</p>
+                </div>
+
+
+                <div class="footer-col-3">
+                    <h3>Follow</h3>
+                    <li>facebook</li>
+                    <li>blog</li>
+                    <li>markating</li>
+                    <li>privacy</li>
+                </div>
+                <div class="footer-col-3">
+                    <h3>links</h3>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                    <li>google</li>
+                    <li>youtube</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

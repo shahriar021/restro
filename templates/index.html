@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/profile.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/style.css')}}">
+
+</head>
+<div class="ban"><h1><i>restro</i></h1></div>
+<body class="bdy">
+<nav style="background: indigo;">
+    <a href="/home">Home</a> |
+
+    <a href="/show item">Show Item</a> |
+
+    <a href="/booking">Booking</a> |
+    <div align="right">
+    <form action="/logout" method="post">
+    <input type="submit" value="logout">
+    </form>
+        </div>
+ </nav>
+<div align="center">
+<h2 >{{ name }}</h2>
+    <marquee>My Profile.....</marquee>
+
+</div>
+
+
+<div class="small-container">
+        <h2 class="title">Signature Items</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="{{url_for('static', filename='download.jpg')}}" />
+                <h4><i>The Burger House</i></h4>
+                <div class="rating"></div>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star" ></i>
+                <i class="fa fa-star-o" ></i>
+                <p >950 &#2547; </p>
+            </div>
+
+            <div class="col-4">
+                <img src="{{url_for('static', filename='downloads.jpg')}}" />
+                <h4><i>Red Velvet</i></h4>
+                <div class="rating"></div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <p>350 &#2547; </p>
+            </div>
+
+            <div class="col-4">
+                <img src="{{url_for('static', filename='images%20(3).jpg')}}" />
+                <h4><i>Bigger Better Burger Joint</i></h4>
+                <div class="rating"></div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <p>500 &#2547; </p>
+            </div>
+
+            <div class="col-4">
+                <img src="{{url_for('static', filename='images.jpg')}}" />
+                <h4><i>bacon pizza</i></h4>
+                <div class="rating"></div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <p>750/980/1300 &#2547; </p>
+            </div>
+
+            <div class="col-4">
+                <img src="{{url_for('static', filename='imagess.jpg')}}" />
+                <h4><i>Classic Pizza</i></h4>
+                <div class="rating"></div>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <p>650/1000/1400 &#2547; </p>
+            </div>
+        </div>
+</div>
+
+
+<div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col-1">
+                    <img src="{{url_for('static', filename='restro.jpg')}}" />
+                    <p>Our goal is to satisfy you </p>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Download our app</h3>
+                    <p>Download app for android or ios</p>
+                </div>
+
+
+                <div class="footer-col-3">
+                    <h3>Follow</h3>
+                    <li>facebook</li>
+                    <li>blog</li>
+                    <li>markating</li>
+                    <li>privacy</li>
+                </div>
+                <div class="footer-col-3">
+                    <h3>links</h3>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                    <li>google</li>
+                    <li>youtube</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

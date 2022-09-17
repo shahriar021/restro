@@ -1,0 +1,38 @@
+input[type=text], input[type=password],input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border: 2px solid red;
+}
+.bdy{
+  background:radial-gradient(#fff,#ffd6d6)
+}
+
+.signup{
+  width: 300px;
+  height: 300px;
+  padding-left: 30px;
+}
+.s1{
+  width: 400px;
+  height: 400px;
+  background-color: #008250;
+  margin-left: 600px;
+  margin-right: 500px;
+  margin-top: 100px;
+  border: 10px solid #050505;
+}
+
+
+input[type=submit]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #24d08e;
+  border: 10px solid #050505;
+}

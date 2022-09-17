@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style/style.css') }}">
+</head>
+<body class="bdy">
+<div class="ban"><h1><i>restro</i></h1></div>
+
+
+
+<nav style="background: indigo;">
+    <a href="/home">Home</a> |
+    <a href="showitem">Show Item</a> |
+    <a href="/booking">Booking</a> |
+    <div align="right">
+    <a href="/login">Log in</a> |
+        <a href="/signup">Sign up</a> |
+        </div>
+ </nav>
+<marquee>Offer !! Offer !! Offer!! Unlimited Pizza Offer.....</marquee>
+
+
+    <form action="/book" method="post">
+        Your Name:<br>
+        <input type="text" name="bkname"/><br>
+        Phone Number:<br>
+        <input type="text" name="bknmbr"/><br>
+        Event:<br>
+        <input type="text" name="bkevent"/><br>
+        Time:<br>
+        <input type="text" name="bkphone"/><br>
+
+        <input type="radio" name="gender" value="Table 1"> Table 1
+        <input type="radio" name="gender" value="Table 2"> Table 2
+        <input type="radio" name="gender" value="Table 3"> Table 3
+        <input type="radio" name="gender" value="Table 4"> Table 4
+        <input type="radio" name="gender" value="Table 5"> Table 5
+        <input type="radio" name="gender" value="Table 6"> Table 6
+        <input type="radio" name="gender" value="Table 7"> Table 7
+        <input type="radio" name="gender" value="Table 8"> Table 8
+        <input type="radio" name="gender" value="Table 9"> Table 9
+        <br>
+        Bkash Number:
+        <input type="text" name="bkname2"/>
+        Bkash Pin:
+        <input type="text" name="bktrnsnmbr2"/><br>
+        Amount:<br>
+        <input type="text" name="bkamount"/><br><br><br>
+
+
+        <input type="submit" value="Submit"/>
+    </form>
+
+
+
+
+
+<div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col-1">
+                    <img src="{{url_for('static', filename='restro.jpg')}}" />
+                    <p>Our goal is to satisfy you </p>
+                </div>
+
+                <div class="footer-col-2">
+                    <h3>Download our app</h3>
+                    <p>Download app for android or ios</p>
+                </div>
+
+
+                <div class="footer-col-3">
+                    <h3>Follow</h3>
+                    <li>facebook</li>
+                    <li>blog</li>
+                    <li>markating</li>
+                    <li>privacy</li>
+                </div>
+                <div class="footer-col-3">
+                    <h3>links</h3>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                    <li>google</li>
+                    <li>youtube</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
